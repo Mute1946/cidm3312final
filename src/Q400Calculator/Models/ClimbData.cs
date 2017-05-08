@@ -24,5 +24,8 @@ namespace Q400Calculator.Models
 
         [Display(Name = "V Climb")]
         public int Vclmb { get; set; }
+
+        [Display(Name="Vref")]
+        public int Vref { get; set; }
     }
 }
