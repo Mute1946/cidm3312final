@@ -1,0 +1,63 @@
+@model Q400Calculator.Models.LandingData
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>LandingData</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Flaps" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Flaps" class="form-control" />
+                <span asp-validation-for="Flaps" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Vapp" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Vapp" class="form-control" />
+                <span asp-validation-for="Vapp" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Vga" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Vga" class="form-control" />
+                <span asp-validation-for="Vga" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Vref" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Vref" class="form-control" />
+                <span asp-validation-for="Vref" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Weight" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Weight" class="form-control" />
+                <span asp-validation-for="Weight" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

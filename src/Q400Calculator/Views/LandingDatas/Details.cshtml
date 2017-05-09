@@ -1,0 +1,48 @@
+@model Q400Calculator.Models.LandingData
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LandingData</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Flaps)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Flaps)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vapp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vapp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vga)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vga)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vref)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vref)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

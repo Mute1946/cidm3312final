@@ -17,6 +17,11 @@ namespace Q400Calculator.Data
 
         public DbSet<ClimbData> ClimbData { get; set; }
 
+        public DbSet<TakeoffData> TakeoffData { get; set; }
+
+        public DbSet<LandingData> LandingData { get; set; }
+        //public DbSet<Pilot> Pilot { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -24,6 +29,8 @@ namespace Q400Calculator.Data
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
             builder.Entity<ClimbData>().ToTable("ClimbData");
+            builder.Entity<TakeoffData>().ToTable("Takeoff Data");
+            builder.Entity<LandingData>().ToTable("Landing Data");
         }
     }
 }
